@@ -1,0 +1,32 @@
+.uk-accordion
+    background: #ffffff
+    padding: 0 $space-sm
+    box-shadow: $subtleboxshadow
+    border-radius: $preferredradius
+    margin: 0  
+    margin-top: 0  
+    @media #{ $smallup}
+        padding: 0 2rem
+        margin-top: $space-md
+    @media #{ $xlargeup}
+        margin-top: $space-lg 
+    li
+        border-bottom: 1px solid #e5e5e5
+        &:last-of-type
+            border-bottom: none
+    .uk-accordion-title
+        color: $richblack
+        overflow: hidden
+        font-weight: $bold
+        padding: 2rem 0
+        font-size: 1.2rem  
+        &::before
+            background-image: url('/uploads/icons/close-accordion.svg')
+    .uk-open
+        .uk-accordion-title:before
+            background-image: url('/uploads/icons/open-accordion.svg')    
+    .uk-accordion-content
+        margin-top: -1rem
+        padding-bottom: 1.5rem
+    &>:nth-child(n+2)
+        margin: 0

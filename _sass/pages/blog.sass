@@ -1,0 +1,200 @@
+.conversations
+    max-width:                          $maxwidth-sm
+    margin:                             0 auto
+    @media #{ $mediumup}
+        max-width:                      $maxwidth-tb
+
+.conversations-single
+    .conversations-single-title
+        font-size: 2rem
+        @media #{ $smallup}
+            font-size: 3.3rem
+            line-height: 1.2
+    .conversations-single-read-time
+        display:                        flex
+        align-items:                    center
+        &::before
+            content:                    ""
+            display:                    block
+            width:                      4px
+            height:                     4px
+            margin:                     0 .75rem
+            border-radius:              50%
+            background:                 $platinum
+    .conversations-single-excerpts
+        color:                          #483627
+        font-size:                      1.2rem
+        border-left:                    3px solid $primarycolor
+        padding-left:                   20px
+        @media #{ $smallup}
+            font-size:                      1.4rem
+            line-height:                    1.2
+    .conversations-single-featured-img
+        max-height:                     350px
+
+
+.markdown
+    max-width: $maxwidth-tb
+    > p, h1, h2, h3, h4, h5, h6, ul, ol
+        @media #{ $smallup}
+            width: $maxwidth-500
+            margin: 0 auto 1rem
+    .markdown-paragraphs
+        font-size: $nanofont
+        @media #{ $smallup}
+            font-size: $smallfont
+        &:first-of-type
+            display: none
+        &:nth-child(2)
+            &:first-letter
+                float: left
+                font-size: 6rem
+                line-height: 65px
+                padding-top: .5rem
+                padding-right: 10px
+    .markdown-images-container
+        padding-left:           0
+        list-style-type:        none
+        max-width:              $maxwidth-tb
+        width:                  100%
+        margin:                 2rem auto
+        display:                grid
+        grid-gap:               $space
+        grid-auto-rows:         300px
+        @media #{ $smallup}
+            grid-template-columns:  repeat(12, 1fr)
+        .markdown-images
+            margin:             0
+            img
+                height:         100%
+            @media #{ $smallup}
+                &:nth-child(4n + 1)
+                    grid-column:        1 / 8
+                &:nth-child(4n + 2)
+                    grid-column:        8 / 13
+                &:nth-child(4n + 3)
+                    grid-column:        1 / 6
+                &:nth-child(4n + 4)
+                    grid-column:        6 / 13
+            
+
+
+
+
+.post-item
+    &:hover
+        color:                          $readablegray
+    .post-img
+        height:                         250px
+        border-top-left-radius:         $preferredradius
+        border-top-right-radius:        $preferredradius
+    .post-item-body
+        min-height:                     320px
+        border-bottom-left-radius:      $preferredradius
+        border-bottom-right-radius:     $preferredradius
+
+.featured-post-item
+    position:                           relative  
+    border-radius:                      $preferredradius
+    @media #{ $mediumup}
+        max-height:                         350px
+        display:                            flex
+    &:hover
+        color:                          $readablegray
+    .featured-post-img
+        width:                          100%
+        height:                         auto
+        border-top-left-radius:         $preferredradius
+        border-top-right-radius:        $preferredradius
+        @media #{ $mediumup}
+            width:                          50%
+            height:                         100%
+            border-top-left-radius:         $preferredradius
+            border-top-right-radius:        0
+            border-bottom-left-radius:      $preferredradius
+            border-bottom-right-radius:     0
+    .featured-post-item-body
+        min-height:                     320px
+        border-bottom-left-radius:      $preferredradius
+        border-bottom-right-radius:     $preferredradius
+        @media #{ $mediumup}
+            border-top-left-radius:         0
+            border-top-right-radius:        $preferredradius
+            border-bottom-left-radius:      0
+            border-bottom-right-radius:     $preferredradius
+
+.archived-post-item
+    padding:                            0
+    display:                            block
+    margin:                             2rem 0
+    @media #{ $mediumup}
+        padding:                        2rem 0
+        margin:                         0
+        display:                        grid
+        grid-gap:                       $space-sm
+        grid-template-columns:          1fr auto
+        border-bottom:                  $borderline
+    &:hover
+        color:                          $readablegray
+    .archived-post-img
+        width:                          100%
+        height:                         300px
+        border-top-left-radius:         $preferredradius
+        border-top-right-radius:        $preferredradius
+        @media #{ $mediumup}
+            width:                      250px
+            height:                     150px
+            border-radius:              none
+    .archived-post-body
+        padding:                        $space-sm $space
+        border:                         $borderline
+        border-radius:                  $preferredradius
+        @media #{ $mediumup}
+            padding:                     0
+            border:                      none
+            border-radius:               none
+    .archived-post-read-time
+        display:                        flex
+        align-items:                    center
+        &::before
+            content:                    ""
+            display:                    block
+            width:                      5px
+            height:                     5px
+            margin:                     0 .75rem
+            border-radius:              50%
+            background:                 $readablegray
+
+.archived-conversations-card
+    min-height: 300px
+    .archived-conversations-link 
+        font-size: 1.7rem
+.pagination
+    color: $primarycolor
+
+
+
+.post-title
+    font-size: 1.2rem
+    &::after
+        content: ""
+        position: absolute
+        bottom: 0
+        width: 220px
+        height: 1.5px
+        background-color: $primarycolor
+        border-radius: 1.08rem
+        display: block
+
+.after-reading
+.recent-conversations
+    @media #{ $smallup}
+        max-height: 160px
+        width: 72%
+        font-size: 2rem
+    .recent-conversations-image
+        width: calc(72% - 150px)
+        border-top-left-radius:         $preferredradius
+        border-bottom-left-radius:      $preferredradius
+    .recent-conversations-title
+        font-size: 1.6rem

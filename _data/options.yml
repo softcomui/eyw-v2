@@ -1,0 +1,22 @@
+# Social Media Handles
+social_media:
+  - name: facebook 
+    slug: https://www.facebook.com/MyEyowo
+  - name: twitter
+    slug: https://twitter.com/eyowo
+  - name: instagram
+    slug: https://www.instagram.com/myeyowo/
+
+features:
+  - title: Send Money
+    description: Transfer cash to any phone number or bank accounts within Nigeria.
+  - title: Receive Money
+    description: Get credited directly on any active phone number or bank account within Nigeria.
+  - title: Request Payment
+    description: Request and accept payments from your customers whenever using just your phone number.
+  - title: Buy Airtime
+    description: Recharge your phone number and those of  your friends and family instantly.
+  - title: Pay Bills
+    description: Pay your electricity, cable bills and more in the most convenient and secure way.
+  - title: Make Cardless ATM Withdrawals 
+    description: Withdraw cash at supported ATMs after generating your Eyowo Paycode and Cash-Out PIN.  These codes are valid for only 24 hours.

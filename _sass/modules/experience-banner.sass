@@ -1,0 +1,81 @@
+// 
+    // Decorative Elements
+
+    // @package eyw-merchant
+    // @author  Jessica Eze <jessica@softcom.ng>
+
+.experience-banner     
+    max-width: $maxwidth-sm
+    margin: 0 auto
+    max-height: 740px
+    height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    @media #{ $largeup}
+        max-width: $maxwidth-lt
+        padding-bottom: 0
+    @media #{ $xlargeup }
+        padding-top: $space-xl
+
+.experience-bg-img
+    height: 100%
+        
+.content-wrapper
+    @media #{ $largeup}
+        display: flex
+        align-items: center
+        justify-content: space-between
+
+.banner-content
+    width: 100%
+    text-align: center
+    display: flex
+    flex-direction: column
+    align-items: center
+    @media #{ $largeup}
+        width: 50%
+        text-align: left
+        align-items: unset
+
+.get-app-cta
+    .google-play svg
+        height: 38px
+    .app-store svg
+        height: 39px
+
+.banner-image
+    @media #{ $largeup}
+        width: 50%
+
+.input-wrap
+    display: flex
+    .phone-number-input
+        border-right: none
+        border-bottom-left-radius: 50px
+        border-top-left-radius: 50px
+        width: calc(100% - 80px)
+        padding: .7rem 1rem
+        outline: none
+        font-size: .825rem
+        background-color: transparent
+        @media #{ $largeup}
+            width: calc(100% - 100px)
+    .input-button
+        border-bottom-right-radius: 50px
+        border-top-right-radius: 50px
+        width: 80px
+        background-color: $primarycolor
+        font-size: $picofont
+        text-transform: uppercase
+        @media #{ $largeup}
+            width: 100px
+            font-size: $primaryfont
+            padding: .72rem 0
+        svg
+            width: 12
+            height: 19
+            @media #{ $mediumup}
+                width: 15
+                height: 21
+

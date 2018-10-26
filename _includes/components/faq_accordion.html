@@ -1,0 +1,12 @@
+<ul uk-accordion="collapsible: false"class="m-0">
+    {% assign sorted = site.faqs | sort: 'position' %}
+    {% for item in sorted %}
+    <li>
+        <a class="uk-accordion-title headingfont" href="#">
+            {{ item.title }}
+            <!-- {%- include tools/icons.html icon="logo-alt-gray" -%} -->
+        </a>
+        <div class="uk-accordion-content">{{ item.description }}</div>
+    </li>
+    {% endfor %}
+</ul>

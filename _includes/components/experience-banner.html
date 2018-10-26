@@ -1,0 +1,25 @@
+<div class="pos-rel mt-3">
+    <div class="experience-banner" {% if page.layout == 'legal' %}style='display:none;'{% endif %}>
+        <img src="{{ site.url }}/uploads/experience-bg.svg" alt="" class="absolute-bottom experience-bg-img" {% if page.layout == 'home' %}style='display:none;'{% endif %}>
+    
+        <div class="content-wrapper pos-rel wrapper-x">
+            <div class="banner-content">
+                <h2 class="section-title">Experience Eyowo now</h2>
+                <form action="" method="" class="m-0 width-100-pc">
+                    <div class="input-wrap">
+                        <label for="phone-number"></label>
+                        <input type="tel" name="phone-number" id="phone-number" placeholder="Enter our phone number" class="phone-number-input borderline">
+                        <button type="" class="input-button">
+                            <div class="d-iflx al-i-c">
+                                {%- include tools/icons.html icon="logo-alt-white" -%}
+                                <span class="fw-medium co-white suffix">Enjoy</span>
+                            </div>
+                        </button>
+                    </div>
+                </form>
+                {% include components/get-app.html %}
+            </div>
+            <img src="{{ site.url }}/uploads/experience-app.png" alt="A hand holding the eyowo app" class="show-largeup banner-image">
+        </div>
+    </div>
+</div>

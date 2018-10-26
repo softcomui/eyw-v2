@@ -1,0 +1,75 @@
+
+ 
+.features-content
+    position: relative
+    z-index: 1
+    max-width: $maxwidth-tb
+    margin: 0 auto
+    @media #{ $largeup}
+        max-width: 100%
+        margin: 0
+.features
+    display: grid
+    grid-gap: $space
+    @media #{ $smallup}
+        grid-template-columns: repeat(2, 1fr)
+    & h3.title
+        font-size: 1.3rem
+    & p.description
+        max-width: 250px
+        font-size: 1.05rem
+    .a-feature
+        .double-check
+            width: 30px
+            height: 30px
+            border-radius: 10px
+            display: flex
+            justify-content: center
+.features-img
+    width: 600px
+    position: absolute
+    left: 0
+    top: -60px
+    bottom: 0
+    object-fit: contain
+    opacity: .2
+    z-index: 0
+    @media #{ $xlargeup}
+        opacity: 1
+
+
+
+.why-section
+    min-height: 700px
+    margin-top: 6rem
+.glide__slide
+    // width:  400px
+    
+
+
+        
+// .swiper-pagination
+//     color: $primarycolor
+//     display: inline-flex
+//     position: static 
+//     transform: none
+//     z-index: 2
+//     text-align: unset
+//     margin-left: 15px
+
+// .swiper-pagination-bullet
+//     width: 33px
+//     height: 2px
+//     display: inline-block
+//     background: rgba(196, 112, 46, 0.51)
+//     opacity: 1
+//     border-radius: $preferredradius
+
+// .swiper-pagination-bullet-active
+//     opacity: 1
+//     background: $primarycolor
+
+// .swiper-container-horizontal 
+//     & > .swiper-pagination-bullets
+//         position: absolute
+//         bottom: 0

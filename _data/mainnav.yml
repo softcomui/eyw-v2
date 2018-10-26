@@ -1,0 +1,8 @@
+- name: Home
+  slug: /
+- name: Business
+  slug: /business/
+- name: Conversations
+  slug: /conversations/
+- name: FAQs
+  slug: /faqs/

@@ -1,0 +1,26 @@
+<section id="features" class="pos-rel">
+   <div class="d-flx al-i-c j-c-fe maxwidth-xl mx-auto">
+        <div class="features-img show-slaptop">
+            <img src="{{ site.url }}/uploads/features.svg" alt="">
+        </div>
+        <div class="features-content wrapper will-grow negate-bottom">
+            <h3 class="section-title pb-2">With Eyowo you can...</h3>
+       
+            <ul class="m-0 none features">
+                {% for entry in site.data.options.features %}
+                <li class="a-feature d-flx">
+                    <div class="bg-primary double-check">
+                        {%- include tools/icons.html icon="double-check" -%}
+                    </div>
+                    <div class="suffix is-wider">
+                        <h3 class="title m-0 pb-h"> {{ entry.title }}</h3>
+                        <p class="description"> {{ entry.description }} </p>
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+
+            {% include components/get-app.html %}
+        </div>
+   </div>
+</section>

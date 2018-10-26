@@ -1,0 +1,97 @@
+// 
+    // Text Decorations
+
+    // @package eyw-merchant
+    // @author  Jessica Eze <jessica@softcom.ng>
+
+//font
+.headingfont
+    font-family: $headingfont
+.bodyfont
+    font-family: $bodyfont
+
+
+// Texts
+.tx-c
+    text-align:         center
+.txt-justify
+    text-align:          justify
+.underline
+    text-decoration:    underline
+
+.text-shadow-light
+    text-shadow:        0 1px 2px rgba( 0, 0, 0, 0.3 )
+    
+.lh-1-1h
+    line-height:        1.15
+.lh-1-2h
+    line-height:        1.25
+.lh-1-3h
+    line-height:        1.35
+
+.lead
+    font-size: 1.5rem
+    margin:  0
+    margin-bottom: .5rem
+    color: $richblack
+    @media #{ $smallup }
+        font-size: 2.2rem
+.lead-summary
+    line-height:        1.35
+    font-size:          $nanofont
+    @media #{ $smallup }
+        font-size:          1.05rem
+
+.nano-caps
+    +text-treatment( $nanofont, uppercase, .5px )
+.primary-caps
+    +text-treatment( $primaryfont, uppercase, .5px )
+.pico-caps
+    +text-treatment( $picofont, uppercase, 1px )
+
+
+// Sizes
+.picotext
+    font-size:          $picofont
+.primarytext
+    font-size:          $primaryfont
+.nanotext
+    font-size:          $nanofont
+.smalltext
+    font-size:          $smallfont
+.mediumtext
+    font-size:          $mediumfont
+.largetext
+    font-size:          2.2rem
+
+// Headings
+h1, h2, h3, h4, .h1, .h2, .h3, .h4
+    margin-top:         $space-sm
+    margin-bottom:      $space-xs
+    font-weight:        $bold
+    line-height:        $headinglh
+    font-family:        $headingfont
+h1, .h1
+    font-size:          1.75rem
+    @media #{ $smallup }
+        font-size:      1.95rem
+h2, .h2
+    font-size:          1.65rem
+    @media #{ $smallup }
+        font-size:      1.85rem
+h3, .h3
+    font-size:          1.42rem
+h4, .h4
+    font-size:          1.00rem
+
+// Fonts
+.fw-bold
+    font-weight:        $bold
+.fw-medium
+    font-weight:        $medium
+.fw-normal
+    font-weight:        $normal
+.ff-body
+    font-family:        $bodyfont
+.ff-heading
+    font-family:        $headingfont

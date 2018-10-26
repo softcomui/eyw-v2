@@ -1,0 +1,52 @@
+// 
+    // Icons
+
+    // @package eyw
+    // @author  Kabolobari Benakole <i@kb.life>
+
+.prefix
+    margin-right:           6px
+    &.is-wider
+        margin-right:       15px
+    &.is-even-wider
+        margin-right:       24px
+    &.subtle-push
+        padding-bottom:     .15rem
+
+.suffix
+    margin-left:            6px
+    &.is-wider
+        margin-left:        15px
+    &.is-even-wider
+        margin-left:        24px
+
+.vertical-divider
+    display:                block
+    height:                 $space-sm
+    border-right:           1.5px solid rgba( 255, 255, 255, 0.4 )
+
+.slats
+    pointer-events:         none
+    &::before, &::after
+        content:            ''
+        top:                0
+        left:               0
+    &::before
+        transform:          translateY(-6px)
+    &::after
+        transform:          translateY(6px)
+.slats, .slats::before, .slats::after
+    position:               absolute
+    width:                  22px
+    height:                 2px
+    left:                   0
+    riht:                   0
+    background-color:       $primarycolor
+    transition:             background 250ms ease, transform 250ms ease-in
+.is-clicked
+    .slats
+        background-color:   transparent
+        &::before
+            transform:      rotate(-45deg)
+        &::after
+            transform:      rotate(45deg)

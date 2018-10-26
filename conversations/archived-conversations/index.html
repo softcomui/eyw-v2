@@ -1,0 +1,74 @@
+---
+layout: default
+breadcrumb: Archived conversations
+---
+
+<div class="maxwidth-tb mx-auto wrapper will-grow">
+    <header class="headingfont">
+        {%- include components/breadcrumbs.html -%}
+    </header>
+
+    <ul class="none m-0">
+        {% assign sorted = paginator.posts | sort: 'release_date' | reverse %}
+        {% for item in sorted %}
+        <li class="m-0">
+            <a href="{{ item.url | prepend: site.url }}" class="archived-post-item co-readable-gray">
+                <!-- <img src="{{ item.featured_image | prepend: site.url }}" alt="{{ item.image_description }}" class="archived-post-img hide-mediumup"> -->
+                <div class="archived-post-body d-flx flx-dir-c j-c-sb">
+                    <div>
+                        <p class="primary-caps m-0" {% if item.color %}style="color: {{ item.color }}"{% endif %}>{{ item.tag | first }}</p>
+                        <div class="d-flx flx-dir-c j-c-sb">
+                            <h3 class="co-rich-black m-0">
+                                {{ item.title }}
+                            </h3>
+                            <p class="mt-1">{{ item.excerpt | truncatewords: 15, '...' }}</p>
+                        </div>
+                    </div>
+                    <div class="d-flx al-i-c">
+                        <p class="primary-caps fw-bold m-0">{{ item.date | date: ' %b %d, %Y'}}</p>
+                        <p class="primary-caps fw-bold m-0 archived-post-read-time" title="Estimated read time">
+                            {% assign words = item.content | strip_html | number_of_words %}
+                            {% include read_time.html %}
+                        </p>
+                    </div>
+                </div>
+                <img src="{{ item.featured_image | prepend: site.url }}" alt="{{ item.image_description }}" class="archived-post-img show-mediumup">
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+
+    {% if paginator.total_pages > 1 %}  
+    <div class="pagination mt-2 d-flx al-i-c j-c-sb">  
+        {% if paginator.previous_page %}  
+            <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="fw-medium d-iflx al-i-c">
+                {%- include tools/icons.html icon="chevron-left" -%}
+                <span class="suffix primary-caps fw-medium">Prev</span>
+            </a>  
+        {% else %}  
+            <p class="m-0 fw-medium d-iflx al-i-c">
+                {%- include tools/icons.html icon="chevron-left" -%}
+                <span class="suffix primary-caps fw-medium">Prev</span>
+            </p>  
+        {% endif %}  
+        
+        {% for page in (1..paginator.total_pages) %}  
+            {% if page == paginator.page %}  
+            <p class="m-0 co-readable-gray">{{ page }} of {{ paginator.total_pages }}</p>  
+            {% endif %}  
+        {% endfor %}  
+        
+        {% if paginator.next_page %}  
+            <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="fw-medium d-iflx al-i-c">
+                <span class="suffix primary-caps fw-medium">Next</span>
+                {%- include tools/icons.html icon="chevron-right" -%}
+            </a>  
+        {% else %}  
+        <p class="m-0 fw-medium d-iflx al-i-c">
+            <span class="prefix primary-caps fw-medium">Next</span>
+            {%- include tools/icons.html icon="chevron-right" -%}
+        </p>   
+        {% endif %}  
+    </div>  
+    {% endif %}  
+</div>

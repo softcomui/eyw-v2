@@ -1,0 +1,59 @@
+# Site settings
+title:          Eyowo
+shortname:      eyowo
+description:  >-
+  Eyowo is the simplest way to send or recieve money online or offline.
+url:            'https://eyowo.com'
+charset:        'UTF-8'
+timezone:       Africa/Lagos
+typekit_id:     lbi1rxk
+language:       en
+paginate:       5
+paginate_path: /conversations/archived-conversations/p:num/
+# google_analytics_id: 'UA-122859875-1'
+
+# Build settings
+markdown: kramdown
+
+# Collections
+collections:
+  uploads:
+    title:  Uploads (Media & Files)
+    output: true
+  faqs:
+    title:  FAQs
+  whyeyowo:
+    title:  Why Eyowo
+
+defaults:
+  - scope:
+      type: posts
+    values:
+      featured: false
+
+# Plugins   
+plugins:
+  - jekyll-paginate
+
+    
+# Include folders
+include:
+  - _pages
+  
+# Handling Sass
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Exclude from processing.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - package.json
+  - dev
+  - .gitignore

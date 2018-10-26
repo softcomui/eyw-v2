@@ -1,0 +1,68 @@
+// 
+    // Base
+
+    // @package eyw-merchant
+    // @author  Jessica Eze <jessica@softcom.ng>
+
+html
+    font-size:              $basefont
+
+*, *::before, *::after
+    box-sizing:             border-box
+
+body
+    margin:                 0
+    font-family:            $bodyfont
+    font-weight:            $normal
+    line-height:            $defaultlh
+    color:                  $readablegray
+    font-size:              $nanofont
+    background:             $primarybg
+    position:               relative  
+    display:                flex
+    flex-direction:         column
+    justify-content:        space-between
+    @media #{ $largeup }
+        padding-top:        $space-lg
+
+main 
+    flex: 1
+
+p
+    margin:                 0
+    margin-bottom:          $basefont
+    font-size:              $nanofont
+    &:last-of-type:not(:only-of-type)
+        margin-bottom:      0
+
+a, .as-link
+    text-decoration:        none
+    color:                  $primarycolor
+    transition:             color 0.32s ease-out
+    font-family:            $headingfont
+    &:active, &:focus, &:hover
+        text-decoration:    none
+        color:              $primarycolor
+            
+
+audio, canvas, img, video
+    display:                block
+    vertical-align:         middle
+
+img
+    width:                  100%
+    object-fit:             cover
+
+figure
+    max-width:              $maxwidth-tb
+    width:                  100%
+    
+ul.none, ol.none
+    padding-left:           0
+    list-style:             none
+
+button
+    border:                 none
+    cursor:                 pointer
+
+

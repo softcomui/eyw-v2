@@ -1,0 +1,41 @@
+// 
+    // Decorative Elements
+
+    // @package eyw-merchant
+    // @author  Jessica Eze <jessica@softcom.ng>
+
+.border-radius-50  
+    border-radius: 50px
+.border-bottom
+    border-bottom:          $borderline
+.border-top
+    border-top:          $borderline
+.dashed-border
+    border:                 1px dashed $sweetgray
+    border-radius:          $preferredradius
+.after-border
+    &::after 
+        content: ""
+        display: block
+        border-bottom: 1px solid $primarycolor
+        position: relative
+        top: 0.5rem
+
+.no-border-top
+    border-top:             none
+.no-border
+    border:                 none
+.borderline
+    border:                 0.5px solid #e5e5e5
+.borderline-primary
+    border:                 1px solid $primarycolor
+
+
+.preferred-radius
+    border-radius:          $preferredradius
+.td-underline
+    text-decoration:        underline
+.is-raised
+    box-shadow:             $subtleboxshadow
+.inline-shadow
+    box-shadow:             0px 2px 6px rgba(0, 0, 0, 0.039)

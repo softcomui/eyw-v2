@@ -1,0 +1,73 @@
+// 
+    // Wrappers for all Layouts
+
+    // @package eyw-merchant
+    // @author  Jessica Eze <jessica@softcom.ng>
+
+.wrapper
+    padding:                    $space-lg $space
+    &.will-grow
+        @media #{ $mediumup }
+            padding-top:        $space-md
+            padding-bottom:     $space-md
+        @media #{ $largeup }
+            padding-top:        $space-lg
+            padding-bottom:     $space-lg
+        @media #{ $xlargeup }
+            padding-top:        $space-xl
+            padding-bottom:     $space-xl
+    &.negate-top
+        padding-top:            0!important
+    &.negate-bottom
+        padding-bottom:         0!important
+    &.negate-x
+        padding-right:          0!important
+        padding-left:           0!important
+    &.negate-top-slaptopup
+        @media #{ $slaptop }
+            padding-top:        0!important
+    &.negate-top-largeup
+        @media #{ $largeup }
+            padding-top:        0!important
+    &.negate-bottom-smallup
+        @media #{ $smallup }
+            padding-bottom:     0!important
+
+.wrapper-y
+    padding-top:        $space-lg
+    padding-bottom:     $space-lg 
+    &.will-grow
+        @media #{ $mediumup }
+            padding-top:        $space-md
+            padding-bottom:     $space-md
+        @media #{ $largeup }
+            padding-top:        $space-lg
+            padding-bottom:     $space-lg
+        @media #{ $xlargeup }
+            padding-top:        $space-xl
+            padding-bottom:     $space-xl
+    &.negate-top
+        padding-top:            0!important
+    &.negate-bottom
+        padding-bottom:         0!important
+        
+.wrapper-x
+    padding-right:      $space
+    padding-left:       $space
+
+.section
+    margin: 2rem 0
+    &.with-padding
+        padding: 1.5rem
+.section-with-overflow
+    @media #{ $largeup}
+        max-height: 300px
+        overflow: auto
+.premium-wrapper
+    padding: 2rem 1rem
+    padding-bottom: 4rem
+    @media #{ $mediumup}
+        padding: 4rem
+        padding-bottom: 7rem
+
+

@@ -1,0 +1,23 @@
+<footer class="bg-black co-white wrapper-x z-depth-3 pos-rel">
+    <div class="maxwidth-xl mx-auto footer-content">
+        <div class="footer-branding">
+            {%- include tools/icons.html icon="logo-alt-gray" -%}
+            <p class="primarytext co-primary-gray copyright m-0 suffix is-wider">Copyright © 2018 Eyowo Integrated Payments Limited. All rights reserved. <a href="{{ site.url }}/legal/">Legal</a></p>
+        </div>
+        <ul class="m-0 none d-flx al-i-c">
+            {%- for entry in site.data.options.social_media -%}
+                <li>
+                    <a href="{{ entry.slug }}" class="d-blk social-links">
+                        {%- if entry.name == 'facebook' -%}
+                        {%- include tools/icons.html icon="facebook" -%}
+                        {%- elsif entry.name == 'twitter' -%}
+                        {%- include tools/icons.html icon="twitter" -%}
+                        {%- elsif entry.name == 'instagram' -%}
+                        {%- include tools/icons.html icon="instagram" -%}
+                        {%- endif -%}
+                    </a>
+                </li>
+            {%- endfor -%}
+        </ul>
+    </div>
+</footer>

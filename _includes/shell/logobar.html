@@ -1,0 +1,17 @@
+<section class="nanotext hide-largeup z-depth-3 absolute-top">
+    <h2 class="sr">
+        Site Branding &amp; Navigation Tools
+    </h2>
+    <div class="logobar maxwidth-tb mx-auto wrapper-x">
+        <div class="d-flx al-i-c j-c-sb">
+            <a class="logo-holder d-blk" href="{{ site.url }}">
+                {% include tools/icons.html icon="logo" %}
+            </a>
+            <button class="hide-largeup pos-rel toggle-mobile-nav" aria-label="Toggle Navigation" nav-toggler>
+                <span class="slats"></span>
+            </button>
+        </div>
+
+        {% include shell/nav/mobilenav.html %}
+    </div>
+</section>

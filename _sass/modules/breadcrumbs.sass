@@ -1,0 +1,27 @@
+.breadcrumb
+    margin: 0
+    margin-bottom: 1rem
+    font-size: .925rem
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    justify-content: center
+    @media #{ $mediumup}
+        font-size: $nanofont
+    &.at-the-start
+        justify-content: flex-start
+    a
+        &::before
+            content: ""
+            margin: 0 .7rem
+            border: solid $sweetgray
+            border-width: 0 2px 2px 0
+            display: inline-block
+            padding: 3px
+            transform: rotate(-45deg)
+            -webkit-transform: rotate(-45deg)
+            @media #{ $mediumup}
+                padding: 4px
+        &:first-of-type
+            &::before
+                content: none

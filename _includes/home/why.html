@@ -1,0 +1,22 @@
+<section class="pos-rel why-section d-flx flx-dir-c j-c-center">
+    <img src="{{ site.url }}/uploads/why-section-bg.svg" alt="" class="absolute-zero height-100-pc">
+
+    <div class="pos-rel z-depth-2 maxwidth-xl wrapper-x mx-auto grid">
+        <div class="col-12 col-4-md">
+            <h3 class="section-title small">Why Eyowo</h3>
+            <p>Our ultimate aim is financial inclusion for millions of Nigerians who have phone numbers but no bank accounts. For those with bank accounts, we aim to simplify payments.</p>
+        </div>
+
+        <div class="glide col-12 col-8-md offset-4-cols-from-left">
+            <div class="glide__track" data-glide-el="track">
+                <ul class="glide__slides none m-0">
+                    {%- for item in site.whyeyowo -%}
+                    <li class="glide__slide">
+                        <img src="{{ item.testimony_image | prepend: site.url }}" alt="" class="why-slider-image">
+                    </li>
+                    {%- endfor -%}
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

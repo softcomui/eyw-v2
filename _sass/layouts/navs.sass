@@ -1,0 +1,113 @@
+// 
+    // Navigation
+
+    // @package eyw-merchant
+    // @author  Jessica Eze <jessica@softcom.ng>
+    
+
+.logobar
+    .logo-holder
+        padding: 1.5rem $space 
+        padding-left: 0
+    .toggle-mobile-nav
+        background: transparent 
+        height: 25px
+        width: 25px
+
+
+.desktopnav
+    transition:         all .2s linear
+    position:           fixed
+    top:                0
+    bottom:             unset
+    .logo-holder
+        padding: 1.5rem $space 
+        padding-left: 0
+    &.is-fixed
+        z-index:            5
+        background-color:   rgb( 255, 255, 255)
+        box-shadow:         0 1px 1px 0 rgba( 0, 0, 0, 0.25 )
+    &.is-fixed
+        .logo-holder
+            display:        block
+            opacity:        1
+            visibility:     visible
+    li 
+        & > a
+        position: relative
+        padding: 1.5rem $space-sm
+        &.is-active
+            color: $primarycolor
+        // &:after
+        //     content: ""
+        //     position: absolute
+        //     left: 50%
+        //     transform: translate( -50%, -50% )
+        //     border-radius: 100%
+        //     width: 5px
+        //     height: 5px
+        //     background: $primarycolor
+        &:last-of-type
+            a
+                margin-right: $space-sm
+
+.mobilenav
+    position:               absolute
+    top:                    70px
+    right:                  12px
+    width:                  100%
+    max-width:              300px
+    background-color:       #000
+    z-index:                2
+    box-shadow:             $subtleboxshadow
+    border-radius:          8px
+    transform:              scale(.8) translateY(-10%)
+    transform-origin:       top right
+    transition:             all 320ms cubic-bezier(.24,.22,.015,1.56), opacity .1s ease-in-out
+    opacity:                0
+    pointer-events:         none
+    z-index:                10
+    &.is-active
+        opacity:            1
+        pointer-events:     auto
+        transform:          scale(1) translate(0)
+    &::before
+        content: ""
+        position: absolute
+        top: -0.55rem
+        right: .45rem
+        width: 0
+        height: 0
+        border-style: solid
+        border-width: 0 10px 10px 10px
+        border-color: transparent transparent #000 transparent
+    .nav
+        li 
+            &:last-of-type
+                a
+                    border-bottom: none
+        a
+            padding: 1rem 0
+            margin: 0 $space
+            color: rgba(255, 255, 255, .6)
+            border-bottom: 1px solid rgba(255, 255, 255, .6)
+            &.is-active, &:hover
+                color: $primarycolor
+                border-bottom: 1px solid $primarycolor
+        // &.mobile-nav
+        //     li
+        //         width: 100%
+        //         &:last-of-type a
+        //             border-bottom: none
+        //         a
+        //             display: flex
+        //             padding: $space 0
+        //             margin: 0 $space
+        //             border-bottom: $borderline
+        //             &.is-active
+        //                 border-bottom: 2px solid $primarycolor
+
+    
+
+
+

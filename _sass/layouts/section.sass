@@ -1,0 +1,27 @@
+// 
+    // Wrappers for all Layouts
+
+    // @package eyw-merchant
+    // @author  Jessica Eze <jessica@softcom.ng>
+
+
+.section-title
+    font-size: 1.65rem
+    color: $richblack
+    margin: 0
+    margin-bottom: 1.5rem
+    position: relative
+    @media #{ $smallup }
+        font-size: 2.2rem
+    &::after
+        @media #{ $smallup }
+            transform: translate(180px, -15px)
+            content: " "
+            display: block
+            width: 150px
+            border-bottom: 4px solid rgba(196, 112, 46, 0.3)
+    &.small
+        &::after
+            @media #{ $smallup }
+                transform: translate(80px, -15px)
+                width: 100px

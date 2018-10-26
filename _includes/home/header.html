@@ -1,0 +1,44 @@
+<section class="pos-rel home-header">
+    <div class="absolute-zero">
+        <div class="absolute-zero header-bg-logo">
+            {%- include tools/icons.html icon="header-bg-logo" -%}
+        </div>
+        <img src="{{ site.url }}/uploads/header-bg.svg" alt="" class="absolute-zero height-100-pc">
+    </div>
+
+    <div class="mx-auto wrapper-x header-content-wrapper">
+        <div class="header-content">
+            <h2 class="co-rich-black headline m-0">Make Payments. <span class="d-blk">However. Whenever.</span></h2>
+            <p class="nanotext lh-1-3h pt-1 m-0">Send, receive, spend money and pay bills with just your phone number. Carry out all your transactions with or without a bank account. </p>
+            {% include components/get-app.html %}
+
+            <div class="iphoneview mt-3 hide-largeup">
+                <div class="iphone__screen">
+                        <video class="iphone_video" autoplay="" loop="">
+                            <source type="video/mp4" src="{{ site.url }}/uploads/header/eyw.mp4">
+                        </video>
+                    <div class="iphone__screen-shadow"></div>
+                </div>
+                <div class="iphone_notch"></div>
+            </div>
+        </div>
+        
+        <div class="show-largeup absolute-middle-right width-50-pc hero-header">
+            <img src="{{ site.url }}/uploads/header/webview.svg" alt="" class="webview absolute-middle-right">
+            <div class="iphoneview">
+                <div class="iphone__screen">
+                        <video class="iphone_video" autoplay="" loop="">
+                            <source type="video/mp4" src="{{ site.url }}/uploads/header/eyw.mp4">
+                        </video>
+                    <div class="iphone__screen-shadow"></div>
+                </div>
+                <div class="iphone_notch"></div>
+            </div>
+            <img src="{{ site.url }}/uploads/header/feature-phone.svg" alt="" class="feature-phone">
+        </div>
+    </div>
+
+    <a href="#features" class="flx-show-largeup flx-dir-c al-i-c p-1 z-depth-2 absolute-bottom">
+        {%- include tools/icons.html icon="link-to-next-section" -%}
+    </a>
+</section>

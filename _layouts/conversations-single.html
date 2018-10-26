@@ -1,0 +1,37 @@
+---
+layout: base
+---
+
+<section class="maxwidth-tb mx-auto wrapper-x conversations-single">
+	<header>
+		<div class="pb-1h border-bottom">
+			<p class="primary-caps m-0 fw-bold pt-1 pb-h ff-heading" {% if page.color %}style="color: {{ page.color }}"{% endif %}>{{ page.tag | first }}</p>
+			<h3 class="co-rich-black m-0 conversations-single-title pb-1h">
+				{{ page.title }}
+			</h3>
+			<div class="d-flx al-i-c j-c-sb flx-wrap co-platinum">
+				<div class="d-flx al-i-c mb-h">
+					<p class="primary-caps m-0 ff-heading">{{ page.date | date: ' %b %d, %Y'}}</p>
+					<p class="primary-caps mb-h conversations-single-read-time ff-heading" title="Estimated read time">
+						{% assign words = page.content | strip_html | number_of_words %}
+						{% include read_time.html %}
+					</p>
+				</div>
+				<div class="d-flx al-i-c">
+					<img src="{{ page.author_image | prepend: site.url }}" class="mr-h avatar is-nano" alt="{{ page.author_name }}">
+					<p class="primary-caps m-0 ff-heading">{{ page.author_name}}</p>
+				</div>
+			</div>
+		</div>
+		<div class="pt-1h pb-1h">
+			<p class="ff-heading conversations-single-excerpts m-0">{{ page.excerpt }}</p>
+		</div>
+		<img src="{{ page.featured_image | prepend: site.url }}" alt="{{ page.image_description }}" class="conversations-single-featured-img">
+	</header>
+
+	<article class="wrapper-y markdown">
+	{{ page.content }}
+	</article>
+
+	{% include components/after-reading.html %}
+</section>

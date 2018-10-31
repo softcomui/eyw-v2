@@ -2,14 +2,20 @@
     <h2 class="sr">
         Site Branding &amp; Navigation Tools
     </h2>
-    <div class="logobar maxwidth-tb mx-auto wrapper-x">
+    <div class="logobar maxwidth-tb mx-auto wrapper-x pos-rel">
         <div class="d-flx al-i-c j-c-sb">
             <a class="logo-holder d-blk" href="{{ site.url }}">
                 {% include tools/icons.html icon="logo" %}
             </a>
-            <button class="hide-largeup pos-rel toggle-mobile-nav" aria-label="Toggle Navigation" nav-toggler>
-                <span class="slats"></span>
-            </button>
+            <div class="d-flx al-i-c">
+                <a href="https://app.eyowo.com" class="d-blk bg-primary d-flx al-i-c py-h px-1h border-radius-50">
+                    {%- include tools/icons.html icon="logo-alt-white" -%}
+                    <span class="fw-medium co-white suffix primary-caps">My Eyowo</span>
+                </a>
+                <button class="hide-largeup pos-rel toggle-mobile-nav suffix is-wider" aria-label="Toggle Navigation" nav-toggler>
+                    <span class="slats absolute-middle"></span>
+                </button>
+            </div>
         </div>
 
         {% include shell/nav/mobilenav.html %}

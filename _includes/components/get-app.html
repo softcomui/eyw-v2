@@ -1,13 +1,13 @@
-<ul class="none m-0 d-flx al-i-c get-app-cta pt-2 pos-rel z-depth-2 ">
-    <li>
-        <a href="" class="google-play">
+<ul class="none m-0 d-flx al-i-c get-app-cta pt-1h pos-rel z-depth-2 ">
+    <li class="prefix">
+        <a href="" class="google-play d-blk">
             {%- include tools/icons.html icon="google-play" -%}
         </a>
     </li>
-    <li>
+    <li class="suffix">
         <a href="" class="app-store">
             {%- include tools/icons.html icon="app-store" -%}
         </a>
     </li>
 </ul>
-<p class="m-0 pt-1 smalltext co-rich-black lh-1-2h">or Dial <span class="co-primary">*4255#</span> to get started <span class="co-readable-gray d-blk primarytext">USSD currently unavailable to MTN subscribers</span></p>
+<p class="m-0 pt-1 smalltext co-rich-black lh-1-2h" {% if page.layout == 'business' %} style="display:none;" {% endif %}>or Dial <span class="co-primary">*4255#</span> to get started <span class="co-readable-gray d-blk primarytext">USSD currently unavailable to MTN subscribers</span></p>

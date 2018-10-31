@@ -14,6 +14,8 @@
 // Texts
 .tx-c
     text-align:         center
+.tx-right
+    text-align:         right
 .txt-justify
     text-align:          justify
 .underline
@@ -42,6 +44,8 @@
     @media #{ $smallup }
         font-size:          1.05rem
 
+.large-caps
+    +text-treatment( $largefont, uppercase, .5px )
 .nano-caps
     +text-treatment( $nanofont, uppercase, .5px )
 .primary-caps

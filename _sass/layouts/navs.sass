@@ -4,52 +4,71 @@
     // @package eyw-merchant
     // @author  Jessica Eze <jessica@softcom.ng>
     
+.logo-holder
+    padding: 1rem $space 
+    padding-left: 0
+.toggle-mobile-nav
+    padding: 1.5rem $space-sm
+    padding-right: 0
 
-.logobar
-    .logo-holder
-        padding: 1.5rem $space 
-        padding-left: 0
-    .toggle-mobile-nav
-        background: transparent 
-        height: 25px
-        width: 25px
+.slats
+    pointer-events:         none
+    &::before, &::after
+        content:            ''
+        top:                0
+        left:               0
+    &::before
+        transform:          translateY(-6px)
+    &::after
+        transform:          translateY(6px)
+.slats, .slats::before, .slats::after
+    position:               absolute
+    width:                  22px
+    height:                 2px
+    background-color:       $primarycolor
+    transition:             background 250ms ease, transform 250ms ease-in
+.is-clicked
+    .slats
+        background-color:   transparent
+        &::before
+            transform:      rotate(-45deg)
+        &::after
+            transform:      rotate(45deg)
+        
 
 
 .desktopnav
     transition:         all .2s linear
     position:           fixed
     top:                0
+    left:               0
+    right:              0
     bottom:             unset
-    .logo-holder
-        padding: 1.5rem $space 
-        padding-left: 0
     &.is-fixed
         z-index:            5
         background-color:   rgb( 255, 255, 255)
         box-shadow:         0 1px 1px 0 rgba( 0, 0, 0, 0.25 )
-    &.is-fixed
+        max-height:         62px
         .logo-holder
             display:        block
             opacity:        1
             visibility:     visible
     li 
-        & > a
         position: relative
-        padding: 1.5rem $space-sm
-        &.is-active
-            color: $primarycolor
-        // &:after
-        //     content: ""
-        //     position: absolute
-        //     left: 50%
-        //     transform: translate( -50%, -50% )
-        //     border-radius: 100%
-        //     width: 5px
-        //     height: 5px
-        //     background: $primarycolor
-        &:last-of-type
-            a
-                margin-right: $space-sm
+        & > a
+            padding: 1.5rem $space-sm
+            &.is-active
+                color: $primarycolor
+                &:after
+                    content: ""
+                    border-radius: 50%
+                    width: 5px
+                    height: 5px
+                    background: $primarycolor
+                    position:           absolute
+                    bottom:             -8px
+                    left:               50%
+                    transform:          translate( -50%, -50% )
 
 .mobilenav
     position:               absolute

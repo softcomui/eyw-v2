@@ -1,16 +1,68 @@
-<!-- <section class="bg-platinum px-1">
-    <div class="after-reading py-2">
-        <div class="d-flx recent-conversations is-raised ">
-            <img src="{{ site.url }}/uploads/recent-conversations.jpeg/" alt="" class="recent-conversations-image">
-            <a href="{{ site.url }}/conversations/" class="d-flx flx-dir-c j-c-center bg-white width-100-pc">
-                <p class="tx-c co-rich-black fw-bold recent-conversations-title m-0">Recent Conversations</p>
+<section class="bg-platinum px-2">
+    <div class="py-2 grid border-bottom">
+        <div class="is-raised col-12 col-8-sm width-100-pc">
+            <a href="{{ site.url }}/conversations/" class="recent-conversations bg-white height-100-pc">
+                <img src="{{ site.url }}/uploads/recent-conversations.jpeg/" alt="" class="recent-conversations-image">
+                <p class="co-rich-black fw-bold recent-conversations-title m-0 wrapper-x width-100-pc j-c-center d-flx flx-dir-c">Recent Conversations</p>
             </a>
         </div>
-        <div class="is-raised pos-rel bg-primary preferred-radius archived-conversations-card small">
+        <div class="is-raised pos-rel bg-primary preferred-radius archived-conversations-card small col-12 col-8-sm offset-8-cols-from-left">
             <img src="{{ site.url }}/uploads/archived-icons-bg.svg/" alt="" class="height-100-pc">
             <a href="{{ site.url }}/conversations/archived-conversations/" class="d-flx flx-dir-c j-c-center absolute-zero">
                 <p class="tx-c co-white lh-1-1h archived-conversations-link small m-0">Archived <span class="d-blk">Conversations</span></p>
             </a>
         </div>
     </div>
-</section> -->
+
+    {% if page.previous.url or page.next.url %}
+        <div class="grid mt-2 pb-1h">
+            {% if page.previous.url %}
+                <a href="{{ page.previous.url | prepend: site.url }}" class="d-blk col-12 col-6-sm">
+                    <p class="co-readable-gray nano-caps fw-bold m-0">Previous</p>
+                    <div class="bg-white after-reading-post">
+                        <img src="{{ page.previous.featured_image | prepend: site.url }}" alt="{{ page.previous.image_description }}" class="col-12 col-4-md right">
+                        <div class="d-flx flx-dir-c j-c-sb col-12 col-4-md offset-4-cols-from-left height-100-pc py-1 wrapper-x">
+                            <div>
+                                <p class="pico-caps m-0" {% if page.previous.color %}style="color: {{ page.previous.color }}"{% endif %}>{{ page.previous.tag | first }}</p>
+                                <h3 class="co-rich-black m-0 nanotext">
+                                    {{ page.previous.title }}
+                                </h3>
+                            </div>
+                            <div class="d-flx al-i-c">
+                                <p class="pico-caps m-0 co-readable-gray">{{ page.previous.date | date: ' %b %d, %Y'}}</p>
+                                <p class="pico-caps m-0 archived-post-read-time co-readable-gray" title="Estimated read time">
+                                    {% assign words = item.content | strip_html | number_of_words %}
+                                    {% include read_time.html %}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            {% endif %}
+            {% if page.next.url %}
+                <a href="{{ page.next.url | prepend: site.url }}" class="d-blk col-12 col-6-sm offset-6-cols-from-left">
+                    <p class="co-readable-gray nano-caps fw-bold m-0 tx-right">Next</p>
+                    <div class="bg-white after-reading-post">
+                        <img src="{{ page.next.featured_image | prepend: site.url }}" alt="{{ page.next.image_description }}" class="col-12 hide-mediumup">
+                        <div class="d-flx flx-dir-c j-c-sb col-12 col-8-md height-100-pc py-1 wrapper-x">
+                            <div>
+                                <p class="pico-caps m-0" {% if page.previous.color %}style="color: {{ page.next.color }}"{% endif %}>{{ page.next.tag | first }}</p>
+                                <h3 class="co-rich-black m-0 nanotext">
+                                    {{ page.next.title }}
+                                </h3>
+                            </div>
+                            <div class="d-flx al-i-c">
+                                <p class="pico-caps m-0 co-readable-gray">{{ page.next.date | date: ' %b %d, %Y'}}</p>
+                                <p class="pico-caps m-0 archived-post-read-time co-readable-gray" title="Estimated read time">
+                                    {% assign words = item.content | strip_html | number_of_words %}
+                                    {% include read_time.html %}
+                                </p>
+                            </div>
+                        </div>
+                        <img src="{{ page.next.featured_image | prepend: site.url }}" alt="{{ page.next.image_description }}" class="col-12 col-8-md offset-8-cols-from-left show-mediumup left">
+                    </div>
+                </a>
+            {% endif %}
+        </div>
+    {% endif %}
+</section>

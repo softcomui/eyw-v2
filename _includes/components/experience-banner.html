@@ -1,5 +1,8 @@
-<div class="pos-rel mt-3">
-    <div class="experience-banner" {% if page.layout == 'legal' %}style='display:none;'{% endif %}>
+<div class="pos-rel">
+    <div  
+    {% if page.layout == 'home' %} class="experience-banner home-layout" {% else %} class="experience-banner mt-3" {% endif %}
+    {% if page.layout == 'legal' %} style='display:none;' {% endif %}
+    {% if page.layout == 'business' %} style='display:none;' {% endif %}>
         <img src="{{ site.url }}/uploads/experience-bg.svg" alt="" class="absolute-bottom experience-bg-img" {% if page.layout == 'home' %}style='display:none;'{% endif %}>
     
         <div class="content-wrapper pos-rel wrapper-x">

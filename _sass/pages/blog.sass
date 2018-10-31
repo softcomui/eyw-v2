@@ -37,7 +37,7 @@
     max-width: $maxwidth-tb
     > p, h1, h2, h3, h4, h5, h6, ul, ol
         @media #{ $smallup}
-            width: $maxwidth-500
+            width: $maxwidth-sm
             margin: 0 auto 1rem
     .markdown-paragraphs
         font-size: $nanofont
@@ -153,22 +153,27 @@
             padding:                     0
             border:                      none
             border-radius:               none
-    .archived-post-read-time
-        display:                        flex
-        align-items:                    center
-        &::before
-            content:                    ""
-            display:                    block
-            width:                      5px
-            height:                     5px
-            margin:                     0 .75rem
-            border-radius:              50%
-            background:                 $readablegray
+
+.archived-post-read-time
+    display:                        flex
+    align-items:                    center
+    &::before
+        content:                    ""
+        display:                    block
+        width:                      3px
+        height:                     3px
+        margin:                     0 .75rem
+        border-radius:              50%
+        background:                 $readablegray
 
 .archived-conversations-card
     min-height: 300px
+    &.small
+        min-height: 150px
     .archived-conversations-link 
         font-size: 1.7rem
+        &.small
+            font-size: 1.2rem
 .pagination
     color: $primarycolor
 
@@ -186,15 +191,48 @@
         border-radius: 1.08rem
         display: block
 
-.after-reading
 .recent-conversations
     @media #{ $smallup}
+        display: flex
         max-height: 160px
-        width: 72%
-        font-size: 2rem
-    .recent-conversations-image
-        width: calc(72% - 150px)
-        border-top-left-radius:         $preferredradius
+.recent-conversations-image
+    width: 100%
+    height: 100px
+    border-top-left-radius:         $preferredradius
+    border-top-right-radius:         $preferredradius
+    @media #{ $smallup}
+        width: 150px
+        height: 100%
+        border-top-right-radius:        0
         border-bottom-left-radius:      $preferredradius
-    .recent-conversations-title
+.recent-conversations-title
+    font-size: 1.2rem
+    text-align: center
+    min-height: 100px
+    @media #{ $smallup}
+        min-height: 100%
+        text-align: left
+    @media #{ $largeup}
         font-size: 1.6rem
+
+.after-reading-post
+    border-radius: $preferredradius
+    @media #{ $smallup}
+        display: grid
+    // height: 120px
+    img
+        height: 100px
+        border-top-left-radius: $preferredradius
+        border-top-right-radius: $preferredradius
+        &.right
+            @media #{ $mediumup}
+                border-top-right-radius: 0
+                border-bottom-right-radius: 0
+                border-top-left-radius: $preferredradius
+                border-bottom-left-radius: $preferredradius
+        &.left
+            @media #{ $mediumup}
+                border-top-left-radius: 0
+                border-bottom-left-radius: 0
+                border-top-right-radius: $preferredradius
+                border-bottom-right-radius: $preferredradius

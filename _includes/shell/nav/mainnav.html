@@ -1,11 +1,11 @@
 <nav class="show-largeup nanotext z-depth-3 desktopnav width-100-pc" id="mainbar">
     <h2 class="sr">Desktop Navigation</h2>
-    <div class="d-flx maxwidth-xl mx-auto j-c-sb al-i-c wrapper-x">
+    <div class="d-flx maxwidth-xl mx-auto j-c-sb al-i-c height-100-pc wrapper-x">
         <a href=" {{ site.url }}" class="logo-holder">
            {%- include tools/icons.html icon="logo" -%}
         </a> 
         <div class="d-flx al-i-c">
-            <ul class="none m-0 d-flx">
+            <ul class="none m-0 d-flx al-i-c">
             {%- for entry in site.data.mainnav -%}
             {%- assign class = nil -%}
             {%- assign url = page.url | remove: 'index.html' -%}
@@ -15,14 +15,14 @@
             {% elsif entry.name == 'Home' and url == '/' %}
                 {% assign class = class | append: ' is-active' %}
             {% endif %}    
-                <li class="">
+                <li>
                     <a href="{{ entry.slug | prepend: site.url }}" class="{{ class }} co-readable-gray">
                         {{ entry.name }}
                     </a>
                 </li>
             {%- endfor -%}
             </ul>
-            <a href="https://app.eyowo.com" class="d-blk bg-primary d-flx al-i-c py-h px-1h border-radius-50">
+            <a href="https://app.eyowo.com" class="d-blk bg-primary d-flx al-i-c py-h px-1h border-radius-50 suffix is-wider">
                 {%- include tools/icons.html icon="logo-alt-white" -%}
                 <span class="fw-medium co-white suffix primary-caps">My Eyowo</span>
             </a>

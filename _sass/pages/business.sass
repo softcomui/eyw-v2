@@ -1,0 +1,94 @@
+.business-intro
+    @media #{ $mediumup}
+        display: flex
+        align-items: center
+        justify-content: space-between
+    .for-business
+        padding-bottom: 2.96rem
+        @media #{ $mediumup}
+            padding-bottom: 0
+            padding-right: 5rem 
+            border-right: 1px solid #d2d2d2 
+    .as-a-business
+        padding-top: 2.96rem
+        @media #{ $mediumup}
+            padding-top: 0
+            padding-left: 5rem      
+.business-button
+    background: #992032
+    color: #ffffff
+    border: none
+    height: 45px
+    &:hover
+        color: #ffffff
+        opacity: .8
+.business-link
+    color: #992032
+    &:hover, &:focus
+        color: #992032
+        opacity: .8
+.business-icon
+    width: 200px
+    margin: 0 auto
+.business-app
+    & > svg
+        width: 130px
+
+
+.business-sections
+    min-height: 700px
+    @media #{ $smallup}
+        display: flex
+        flex-direction: column
+        justify-content: center
+.business-titles
+    font-size: 1.7rem
+.business-section-imgs
+    width: 100%
+    position: relative
+    &.left
+        margin-right: $space
+        @media #{ $smallup}
+            width: 50%
+            position:           absolute
+            top:                50%
+            left:               0
+            transform:          translate( 0, -50% )
+    &.right
+        margin-left: $space
+        @media #{ $smallup}
+            width: 50%
+            position:           absolute
+            top:                50%
+            right:               0
+            transform:          translate( 0, -50% )
+
+.uk-tab
+    .uk-active 
+        &.as-a-business a
+            color: $primarycolor
+            border-bottom: 2px solid $primarycolor
+            &:hover, &:focus
+                color: $primarycolor
+                opacity: .8
+        &.for-business a
+            color: #992032
+            border-bottom: 2px solid #992032
+            &:hover, &:focus
+                color: #992032
+                opacity: .8
+
+
+
+// AS A BUSINESS
+.asb-imgs
+    position: absolute
+    bottom: 0
+    width: 450px
+    opacity: .2
+    @media #{ $smallup}
+        opacity: 1
+    &.last-of-type
+        width: 480px
+        bottom: -100px
+    

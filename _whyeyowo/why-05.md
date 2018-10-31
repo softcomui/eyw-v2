@@ -1,3 +1,3 @@
 ---
-testimony_image: '/uploads/why/why-3.png'
+testimony_image: '/uploads/why/why-2.png'
 ---

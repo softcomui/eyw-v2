@@ -26,6 +26,8 @@
     height:             272px
 .height-100-pc
     height:             100%
+.height-100-vh
+    height:             100%
 
 
 // The Grid
@@ -68,6 +70,7 @@
             &.offset-7-cols-from-left
                 grid-column:    8 / 13
         .col-8-sm
+            grid-column:        1 / 9
             &.offset-8-cols-from-left
                 grid-column:    9 / 13
         .col-9-sm
@@ -91,8 +94,9 @@
             &.offset-7-cols-from-left
                 grid-column:    8 / 13
         .col-8-md
-            &.offset-4-cols-from-left
-                grid-column:    5 / 13
+            grid-column:        1 / 9
+            &.offset-8-cols-from-left
+                grid-column:    9 / 13
 
 .striped-grid
     @extend .grid

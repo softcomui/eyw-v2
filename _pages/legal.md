@@ -2,7 +2,7 @@
 layout: legal
 permalink: /legal/
 page_title: 'Our Legal Policies'
-page_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non tellus et augue sagittis sodales. Suspendisse a volutpat nulla'
+page_description: 'It is important to us that you understand our guiding principles and policies. Check out Eyowo’s Terms Of Service, Grievance, Privacy and Security Policies.'
 breadcrumb: Legal
 ---
 

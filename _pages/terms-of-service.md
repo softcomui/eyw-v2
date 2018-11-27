@@ -2,7 +2,7 @@
 layout: legal
 permalink: /legal/terms-of-service/
 page_title: 'Terms of Service'
-page_description: 'It is important to us that you understand our guiding principles and policies. Check out Eyowo’s Terms Of Service, Grievance, Privacy and Security Policies.'
+page_description: 'Be informed about details of the agreement you are reaching with Eyowo. Read this carefully as it is legally binding.'
 breadcrumb: Legal
 ---
 

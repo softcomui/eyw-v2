@@ -2,7 +2,7 @@
 layout: legal
 permalink: /legal/privacy-policy/
 page_title: 'Privacy Policy'
-page_description: 'It is important to us that you understand our guiding principles and policies. Check out Eyowo’s Terms Of Service, Grievance, Privacy and Security Policies.'
+page_description: 'Learn how we collect and deploy your data when you visit our platforms or use our services. Get to understand our privacy practices.'
 breadcrumb: Legal
 ---
 

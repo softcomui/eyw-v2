@@ -2,7 +2,7 @@
 layout: legal
 permalink: /legal/grievance-policy/
 page_title: 'Grievance Policy'
-page_description: 'It is important to us that you understand our guiding principles and policies. Check out Eyowo’s Terms Of Service, Grievance, Privacy and Security Policies.'
+page_description: 'Find out how you can submit queries and lodge complaints regarding our product or services. Our grievance policy details our dispute resolution methodology.'
 breadcrumb: Legal
 ---
 

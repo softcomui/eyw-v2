@@ -1,6 +1,6 @@
 ---
 title: Privacy Policy
-description: Eyowo is a digital solution that helps you achieve simple day-to-day financial transactions. To use Eyowo, simply create an account here.
+description: Learn how we collect and deploy your data when you visit our platforms or use our services. Get to understand our privacy practices.
 link: /legal/privacy-policy/
 link-text: Explore Privacy Policy
 icon: '/uploads/legal/privacy-policy.svg'

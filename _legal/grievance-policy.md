@@ -1,6 +1,6 @@
 ---
 title: Grievance Policy
-description: Eyowo is a digital solution that helps you achieve simple day-to-day financial transactions. To use Eyowo, simply create an account here.
+description: Find out how you can submit queries and lodge complaints regarding our product or services. Our grievance policy details our dispute resolution methodology.
 link: /legal/grievance-policy/
 link-text: Explore greviance policy
 icon: '/uploads/legal/grievance-policy.svg'

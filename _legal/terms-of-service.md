@@ -1,6 +1,6 @@
 ---
 title: Terms of Services
-description: Eyowo is a digital solution that helps you achieve simple day-to-day financial transactions. To use Eyowo, simply create an account here.
+description: Be informed about details of the agreement you are reaching with Eyowo. Read this carefully as it is legally binding.
 link: /legal/terms-of-service/
 link-text: Explore terms of services
 icon: '/uploads/legal/terms-of-services.svg'

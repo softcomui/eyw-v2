@@ -14,16 +14,15 @@ const eyw = {
     navToggler:     document.querySelector('[togglenav]'),
     images:         document.querySelectorAll('.markdown p img')
 }
+const sticky = 50;
 
-const scrollTrigger = () => {
-    window.onscroll = function(){
-        if (document.body.scrollTop >= 10) {
-            eyw.mainbar.classList.add('is-fixed');
-        } else {
-            eyw.mainbar.classList.remove('is-fixed');
-        }
+document.addEventListener("scroll", function() {
+    if (window.scrollY > sticky ) {
+        eyw.mainbar.classList.add('is-fixed');
+    } else {
+        eyw.mainbar.classList.remove('is-fixed');
     }
-}
+});
 
 // Replace img and iframe etc with html5 types...
 eyw.replaceMedia = function () {
@@ -73,10 +72,8 @@ eyw.toggleNav = function () {
 
 
 // Calls
-scrollTrigger();
 eyw.toggleNav();
 eyw.replaceMedia();
-
 
 
 // create the container

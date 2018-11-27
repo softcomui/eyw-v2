@@ -10,9 +10,11 @@ featured_image3: '/uploads/blog/blog04-3.png'
 featured_image4: '/uploads/blog/blog04-4.png'
 excerpt: "Eyowo provides an easy, convenient and secure way to make and receive payments whether online or offline."
 tag: [PRESS RELEASE]
+featured: true
 color: '#C4702E'
 permalink: /conversations/:title/
 breadcrumb: Getting Started On Eyowo
+comments: true
 ---
 
 Eyowo provides an easy, convenient and secure way to make and receive payments whether online or offline. 

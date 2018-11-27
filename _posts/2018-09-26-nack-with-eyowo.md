@@ -11,9 +11,9 @@ featured_image4: '/uploads/nack/praiz-4.jpg'
 excerpt: "Sunday 16th of September was abuzz with activities as NACK (Nigerian Articulate Culture Kullection) Apparel launched its Interlude Kullection, powered by Eyowo."
 tag: [UPDATES]
 color: '#2F87A5'
-featured: true
 permalink: /conversations/:title/
 breadcrumb: 'NACK With Eyowo: Step into the Booth'
+comments: true
 ---
 
 

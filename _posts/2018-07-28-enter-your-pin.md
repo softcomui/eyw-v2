@@ -14,6 +14,7 @@ tag: [UPDATES]
 color: '#2F87A5'
 permalink: /conversations/:title/
 breadcrumb: Enter Your PIN
+comments: true
 ---
 If you have ever been to a Nigerian ATM, you have probably witnessed one, some or all of these kind of people.
 

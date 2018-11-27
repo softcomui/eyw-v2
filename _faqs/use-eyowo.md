@@ -1,5 +1,6 @@
 ---
 title: Where can I use Eyowo?
-description: Eyowo is a digital solution that helps you achieve simple day-to-day financial transactions. To use Eyowo, simply create an account here and you’re on your way to making your first transaction in seconds. Technically, you already have an Eyowo account. Find out here!
 position: 4
 ---
+
+A lot of digital and traditional stores are collecting payments with Eyowo. You can also use Eyowo to pay flight tickets, bills, hotel bookings etc. You can send funds to anyone in Nigeria with Eyowo. All you need is their phone number. Sending money has never been this seamless.

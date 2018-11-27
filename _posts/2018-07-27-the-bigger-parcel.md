@@ -14,6 +14,7 @@ tag: [PRESS RELEASE]
 color: '#C4702E'
 permalink: /conversations/:title/
 breadcrumb: The Big Parcel
+comments: true
 ---
 
 "When he hears someone is going to the village, he buys a wrapper. Inside that wrapper he wants to send to his mother, he will hide some money inside it" .

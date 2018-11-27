@@ -14,6 +14,7 @@ tag: [UPDATES]
 color: '#2F87A5'
 permalink: /conversations/:title/
 breadcrumb: Within Reach
+comments: true
 ---
 Mondays are definitely some of the toughest days for Lagosians.
 

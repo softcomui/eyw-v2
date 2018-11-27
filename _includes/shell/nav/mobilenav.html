@@ -3,17 +3,21 @@
     <section>
         <h2 class="sr">List of Pages on {{ site.title }}</h2>
         <ul class="nav none m-0 maxwidth-tb mx-auto">
-            {% for entry in site.data.mainnav %}
-            {% assign class = nil %}
-            {% if entry.slug == page.url %}
+        {%- for entry in site.data.mainnav -%}
+            {%- assign class = nil -%}
+            {%- assign url = page.url | remove: 'index.html' -%}
+            {%- assign entryName = entry.name | downcase | slugify -%}
+            {% if url contains entryName %}
                 {% assign class = class | append: ' is-active' %}
-            {% endif %}
-                <li class="">
-                    <a href="{{ entry.slug | prepend: site.url }}" class="{{ class }} d-blk">
-                        {{ entry.name }}
-                    </a>
-                </li>
-            {% endfor %}
+            {% elsif entry.name == 'Home' and url == '/' %}
+                {% assign class = class | append: ' is-active' %}
+            {% endif %}  
+            <li class="">
+                <a href="{{ entry.slug | prepend: site.url }}" class="{{ class }} d-blk">
+                    {{ entry.name }}
+                </a>
+            </li>
+        {% endfor %}
         </ul>
     </section>
 </nav>

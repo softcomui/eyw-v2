@@ -2,6 +2,6 @@
 layout: business
 permalink: /business/
 page_title: 'Eyowo for Business'
-page_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non tellus et augue sagittis sodales. Suspendisse a volutpat nulla.'
+page_description: 'Learn how Eyowo helps you jumpstart sales and boost your revenue. Rake in more income for your existing business by becoming a provider of basic financial services using the Eyowo Kiosk feature.'
 breadcrumb: Business
 ---

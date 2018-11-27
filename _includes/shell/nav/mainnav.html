@@ -16,15 +16,15 @@
                 {% assign class = class | append: ' is-active' %}
             {% endif %}    
                 <li>
-                    <a href="{{ entry.slug | prepend: site.url }}" class="{{ class }} co-readable-gray">
+                    <a href="{{ entry.slug | prepend: site.url }}" class="{{ class }} co-readable-gray d-blk">
                         {{ entry.name }}
                     </a>
                 </li>
             {%- endfor -%}
             </ul>
-            <a href="https://app.eyowo.com" class="d-blk bg-primary d-flx al-i-c py-h px-1h border-radius-50 suffix is-wider">
+            <a href="https://app.eyowo.com" class="d-blk bg-primary d-flx al-i-c py-h px-1h border-radius-50 suffix is-wider" target="_blank">
                 {%- include tools/icons.html icon="logo-alt-white" -%}
-                <span class="fw-medium co-white suffix primary-caps">My Eyowo</span>
+                <span class="fw-bold co-white suffix primary-caps">My Eyowo</span>
             </a>
         </div>
     </div>

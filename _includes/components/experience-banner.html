@@ -5,10 +5,11 @@
     {% if page.layout == 'business' %} style='display:none;' {% endif %}>
         <img src="{{ site.url }}/uploads/experience-bg.svg" alt="" class="absolute-bottom experience-bg-img" {% if page.layout == 'home' %}style='display:none;'{% endif %}>
     
-        <div class="content-wrapper pos-rel wrapper-x">
+        <div class="content-wrapper pos-rel wrapper will-grow">
             <div class="banner-content">
-                <h2 class="section-title">Experience Eyowo now</h2>
-                <form action="" method="" class="m-0 width-100-pc">
+                <h2 class="section-title m-0">Experience Eyowo now</h2>
+                <p class="m-0">Get closer to Eyowo. Experience it on the ios and google play store</p>
+                <!-- <form action="" method="" class="m-0 width-100-pc">
                     <div class="input-wrap">
                         <label for="phone-number"></label>
                         <input type="tel" name="phone-number" id="phone-number" placeholder="Enter our phone number" class="phone-number-input borderline">
@@ -19,7 +20,7 @@
                             </div>
                         </button>
                     </div>
-                </form>
+                </form> -->
                 {% include components/get-app.html %}
             </div>
             <img src="{{ site.url }}/uploads/experience-app.png" alt="A hand holding the eyowo app" class="show-largeup banner-image">

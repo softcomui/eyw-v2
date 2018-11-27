@@ -10,7 +10,7 @@
 .toggle-mobile-nav
     padding: 1.5rem $space-sm
     padding-right: 0
-
+    background: transparent
 .slats
     pointer-events:         none
     &::before, &::after
@@ -47,7 +47,7 @@
     &.is-fixed
         z-index:            5
         background-color:   rgb( 255, 255, 255)
-        box-shadow:         0 1px 1px 0 rgba( 0, 0, 0, 0.25 )
+        box-shadow:         0 1px 1px 0 rgba( 0, 0, 0, 0.15 )
         max-height:         62px
         .logo-holder
             display:        block
@@ -56,7 +56,7 @@
     li 
         position: relative
         & > a
-            padding: 1.5rem $space-sm
+            padding: 1rem $space-sm
             &.is-active
                 color: $primarycolor
                 &:after
@@ -66,7 +66,7 @@
                     height: 5px
                     background: $primarycolor
                     position:           absolute
-                    bottom:             -8px
+                    bottom:             0
                     left:               50%
                     transform:          translate( -50%, -50% )
 

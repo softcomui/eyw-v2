@@ -22,6 +22,9 @@ collections:
     output: true
   faqs:
     title:  FAQs
+  legal:
+    title:  Legal
+    output: true
   whyeyowo:
     title:  Why Eyowo
 

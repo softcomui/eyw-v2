@@ -2,15 +2,15 @@
 layout: base
 ---
 
-<section class="mx-auto wrapper will-grow conversations">
+<div class="mx-auto wrapper will-grow negate-bottom conversations">
     <div>
         {%- assign featuredPosts = site.posts | where: 'featured', true -%}
         {%- for item in featuredPosts limit: 1 -%}
-            <article class="preferred-radius">
-                <h2 class="co-readable-gray fw-normal mt-0 mb-2 pb-1 border-bottom mediumtext post-title pos-rel">
+            <article class="preferred-radius wrapper-y negate-top">
+                <h3 class="co-readable-gray fw-normal mt-0 mb-2 pb-1 border-bottom mediumtext post-title pos-rel">
                     {%- include tools/icons.html icon="pinned" -%}
-                    <span class="suffix">Pinned Conversations</span>
-                </h2>
+                    <span class="suffix">Pinned Conversation</span>
+                </h3>
                 <div class="bg-white is-raised">
                     <a href="{{ item.url | prepend: site.url }}" class="is-raised co-readable-gray featured-post-item">
                         <img src="{{ item.featured_image | prepend: site.url }}" alt="{{ item.image_description }}" class="featured-post-img">
@@ -28,13 +28,13 @@ layout: base
                                 </div>
                             </div>
                             <div class="mt-1h d-flx j-c-sb al-i-c">
-                                <p class="co-platinum pico-caps fw-medium m-0 ff-heading" title="Estimated read time">
+                                <p class="co-platinum pico-caps fw-bold m-0 ff-heading" title="Estimated read time">
                                     {% assign words = item.content | strip_html | number_of_words %}
                                     {% include read_time.html %}
                                 </p>
                                 <div class="d-flx al-i-c">
-                                    <img src="{{ item.author_image | prepend: site.url }}" class="mr-h avatar is-nano" alt="{{ item.author_name }}">
-                                    <p class="pico-caps m-0 co-platinum fw-medium ff-heading">{{ item.author_name}}</p>
+                                    <img src="{{ item.author_image | prepend: site.url }}" class="mr-h avatar is-micro" alt="{{ item.author_name }}">
+                                    <p class="pico-caps m-0 co-platinum fw-bold ff-heading">{{ item.author_name}}</p>
                                 </div>
                             </div>
                         </div>
@@ -42,7 +42,12 @@ layout: base
                 </div>
             </article>
         {%- endfor -%}
-        <div class="grid is-multi-col mostly-2 mt-1h">
+
+        <h3 class="co-readable-gray fw-normal mb-2 pb-1 border-bottom mediumtext post-title pos-rel">
+            {%- include tools/icons.html icon="more" -%}
+            <span class="suffix">More Conversations</span>
+        </h3>
+        <div class="grid is-multi-col mostly-2">
             {%- for item in site.posts limit: 6 -%}
                 {%- unless item.featured == true -%}
                     <article class="bg-white is-raised">
@@ -62,13 +67,13 @@ layout: base
                                     </div>
                                 </div>
                                 <div class="mt-1h d-flx j-c-sb al-i-c">
-                                    <p class="co-platinum pico-caps fw-medium m-0 ff-heading" title="Estimated read time">
+                                    <p class="co-platinum pico-caps fw-bold m-0 ff-heading" title="Estimated read time">
                                         {% assign words = item.content | strip_html | number_of_words %}
                                         {% include read_time.html %}
                                     </p>
                                     <div class="d-flx al-i-c">
-                                        <img src="{{ item.author_image | prepend: site.url }}" class="mr-h avatar is-nano" alt="{{ item.author_name }}">
-                                        <p class="pico-caps m-0 co-platinum fw-medium ff-heading">{{ item.author_name}}</p>
+                                        <img src="{{ item.author_image | prepend: site.url }}" class="mr-h avatar is-micro" alt="{{ item.author_name }}">
+                                        <p class="pico-caps m-0 co-platinum fw-bold ff-heading">{{ item.author_name}}</p>
                                     </div>
                                 </div>
                             </div>
@@ -76,12 +81,12 @@ layout: base
                     </article>
                 {%- endunless -%}
             {%- endfor -%}
-            <div class="is-raised pos-rel bg-primary preferred-radius archived-conversations-card d-flx flx-dir-c j-c-center ">
-                <a href="{{ site.url }}/conversations/archived-conversations/" class="height-100-pc">
-                    <img src="{{ site.url }}/uploads/archived-icons-bg.svg/" alt="" class="height-100-pc absolute-zero">
+            <div class="is-raised pos-rel bg-primary preferred-radius archived-conversations-card">
+                <a href="{{ site.url }}/conversations/archived-conversations/" class="height-100-pc d-flx flx-dir-c j-c-center ">
+                    <img src="{{ site.url }}/uploads/archived-icons-bg.svg" alt="" class="height-100-pc absolute-zero">
                     <p class="tx-c co-white lh-1-1h archived-conversations-link ">Archived <span class="d-blk">Conversations</span></p>
                 </a>
             </div>
         </div>
     </div>
-</section>
+</div>

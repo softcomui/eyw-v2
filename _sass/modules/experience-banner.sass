@@ -7,11 +7,11 @@
 .experience-banner     
     max-width: $maxwidth-sm
     margin: 0 auto
-    max-height: 740px
-    height: 100%
     display: flex
     flex-direction: column
     justify-content: center
+    @media #{ $largeup}
+        height: 740px
     &.home-layout
         max-height: 540px
         @media #{ $largeup}
@@ -22,15 +22,18 @@
     @media #{ $xlargeup }
         padding-top: $space-xl
 
+    
 .experience-bg-img
     height: 100%
-        
+
+
 .content-wrapper
     overflow: hidden
     @media #{ $largeup}
         display: flex
         align-items: center
         justify-content: space-between
+
 
 .banner-content
     width: 100%
@@ -43,6 +46,7 @@
         text-align: left
         align-items: unset
 
+
 .get-app-cta
     margin: 0
     .google-play svg
@@ -52,6 +56,7 @@
         height: 40px
         width: 120px
 
+
 .banner-image
     @media #{ $largeup}
         width: 55%
@@ -60,8 +65,15 @@
             position: absolute
             right: 0
             bottom: 0
+
+
 .input-wrap
     display: flex
+    border-radius: 50px
+    border: 1px solid transparent
+    &:hover, &:focus
+        box-shadow: $subtleboxshadow    
+        border: 1px solid $primarycolor
     .phone-number-input
         border-right: none
         border-bottom-left-radius: 50px
@@ -69,8 +81,9 @@
         width: calc(100% - 80px)
         padding: .7rem 1rem
         outline: none
-        font-size: .825rem
-        background-color: transparent
+        font-size: $nanofont
+        font-family: $bodyfont
+        background-color: #fff
         @media #{ $largeup}
             width: calc(100% - 100px)
     .input-button

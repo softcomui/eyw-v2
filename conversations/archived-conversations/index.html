@@ -16,7 +16,7 @@ breadcrumb: Archived conversations
                 <!-- <img src="{{ item.featured_image | prepend: site.url }}" alt="{{ item.image_description }}" class="archived-post-img hide-mediumup"> -->
                 <div class="archived-post-body d-flx flx-dir-c j-c-sb">
                     <div>
-                        <p class="primary-caps m-0" {% if item.color %}style="color: {{ item.color }}"{% endif %}>{{ item.tag | first }}</p>
+                        <p class="pico-caps m-0 fw-bold ff-heading" {% if item.color %}style="color: {{ item.color }}"{% endif %}>{{ item.tag | first }}</p>
                         <div class="d-flx flx-dir-c j-c-sb">
                             <h3 class="co-rich-black m-0">
                                 {{ item.title }}
@@ -25,8 +25,8 @@ breadcrumb: Archived conversations
                         </div>
                     </div>
                     <div class="d-flx al-i-c">
-                        <p class="primary-caps fw-bold m-0">{{ item.date | date: ' %b %d, %Y'}}</p>
-                        <p class="primary-caps fw-bold m-0 archived-post-read-time" title="Estimated read time">
+                        <p class="co-platinum pico-caps fw-bold m-0 ff-heading">{{ item.date | date: ' %b %d, %Y'}}</p>
+                        <p class="co-platinum pico-caps fw-bold m-0 ff-heading archived-post-read-time" title="Estimated read time">
                             {% assign words = item.content | strip_html | number_of_words %}
                             {% include read_time.html %}
                         </p>
@@ -45,11 +45,8 @@ breadcrumb: Archived conversations
                 {%- include tools/icons.html icon="chevron-left" -%}
                 <span class="suffix primary-caps fw-medium">Prev</span>
             </a>  
-        {% else %}  
-            <p class="m-0 fw-medium d-iflx al-i-c">
-                {%- include tools/icons.html icon="chevron-left" -%}
-                <span class="suffix primary-caps fw-medium">Prev</span>
-            </p>  
+            {% else %}  
+            <a href="#" target="_blank" rel="noopener noreferrer"></a>
         {% endif %}  
         
         {% for page in (1..paginator.total_pages) %}  
@@ -64,10 +61,7 @@ breadcrumb: Archived conversations
                 {%- include tools/icons.html icon="chevron-right" -%}
             </a>  
         {% else %}  
-        <p class="m-0 fw-medium d-iflx al-i-c">
-            <span class="prefix primary-caps fw-medium">Next</span>
-            {%- include tools/icons.html icon="chevron-right" -%}
-        </p>   
+            <a href="#" target="_blank" rel="noopener noreferrer"></a>
         {% endif %}  
     </div>  
     {% endif %}  

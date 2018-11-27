@@ -6,12 +6,14 @@
     .for-business
         padding-bottom: 2.96rem
         @media #{ $mediumup}
+            width: 50%
             padding-bottom: 0
             padding-right: 5rem 
             border-right: 1px solid #d2d2d2 
     .as-a-business
         padding-top: 2.96rem
         @media #{ $mediumup}
+            width: 50%
             padding-top: 0
             padding-left: 5rem      
 .business-button
@@ -36,34 +38,79 @@
 
 
 .business-sections
-    min-height: 700px
-    @media #{ $smallup}
+    display: flex
+    flex-direction: column
+    justify-content: center
+    @media #{ $mediumup}
+        min-height: 700px
         display: flex
-        flex-direction: column
-        justify-content: center
+        flex-direction: row
+        align-items: center
+    &.asb
+        min-height: 700px
+        justify-content: space-between
+
+.asb-imgs
+    position: absolute
+    bottom: 0
+    width: 90%
+    max-width: 350px
+    &.right
+        right: 0
+    &.left
+        left: 0
+    @media #{ $mediumup}
+        width: 100%
+        max-width: 450px
+    @media #{ $largeup}
+        &.right
+            right: 250px
+        &.left
+            left: 250px 
+    &.last-of-type
+        max-width: 400px
+        bottom: -25px
+        @media #{ $mediumup}
+            max-width: 480px
+            bottom: -50px
+
 .business-titles
     font-size: 1.7rem
-.business-section-imgs
-    width: 100%
-    position: relative
-    &.left
-        margin-right: $space
-        @media #{ $smallup}
-            width: 50%
+    margin-top: 0
+    margin-bottom: .5rem
+.business-imgs-section
+    min-height: 200px
+    .business-imgs
+        width: 400px
+        height: 250px
+        position: relative
+        @media #{ $mediumup}
+            height: auto
+        &.left
             position:           absolute
-            top:                50%
+            top:                0
             left:               0
-            transform:          translate( 0, -50% )
-    &.right
-        margin-left: $space
-        @media #{ $smallup}
-            width: 50%
-            position:           absolute
-            top:                50%
-            right:               0
-            transform:          translate( 0, -50% )
+            @media #{ $mediumup}
+                width: 50%
+                top:                50%
+                transform:          translate( 0, -50% )
+        &.right
+            position:          absolute
+            right:             0
+            top:               0
+            @media #{ $mediumup}
+                width: 50%
+                top:                50%
+                transform:          translate( 0, -50% )
 
 .uk-tab
+    &:before
+        content: ""
+        position: absolute
+        bottom: 0
+        left: $space
+        right: $space
+        border-bottom: 1px solid #e5e5e5
     .uk-active 
         &.as-a-business a
             color: $primarycolor
@@ -77,18 +124,4 @@
             &:hover, &:focus
                 color: #992032
                 opacity: .8
-
-
-
-// AS A BUSINESS
-.asb-imgs
-    position: absolute
-    bottom: 0
-    width: 450px
-    opacity: .2
-    @media #{ $smallup}
-        opacity: 1
-    &.last-of-type
-        width: 480px
-        bottom: -100px
     

@@ -20,7 +20,7 @@
         font-size: 1.05rem
     .a-feature
         .double-check
-            width: 30px
+            min-width: 30px
             height: 30px
             border-radius: 10px
             display: flex
@@ -46,21 +46,43 @@
     @media #{ $smallup}
         min-height: 700px
         margin-top: 15rem
-    .why-content,
     .why-slider
-        align-self: center
-
-.why-slider-grid
-    display: grid
-    grid-gap: $space
-    grid-template-columns: repeat(2, 1fr)
-    grid-template-rows: repeat(4, 1fr)
-    li:nth-child(3n + 1)
-        grid-row-start: 2
-        grid-row-end: span 2
-    li:nth-child(3n + 2)
-        grid-row-start: 1
-        grid-row-end: span 2
-    li:nth-child(3n + 3)
-        grid-row-start: 3
-        grid-row-end: span 2
+        @media #{ $largeup}
+            max-width: 650px
+            position:           absolute
+            top:                50%
+            right:              0
+            transform:          translate( 0, -50% )
+        @media #{ $xlargeup}
+            max-width: 900px
+    .uk-slider-items img
+        width: 300px
+        border-radius: 8px
+        margin-right: $space
+        @media #{ $mediumup}
+            width: 500px
+    .uk-dotnav
+        margin-left: 0
+        flex-wrap: nowrap
+        & > *
+            &:first-of-type
+                padding-left: 0
+        & > * > *
+            display: block
+            box-sizing: border-box
+            width: 35px
+            height: 2px
+            border-radius: 5px
+            background: 0 0
+            text-indent: 100%
+            overflow: hidden
+            white-space: nowrap
+            background-color: rgba(196, 112, 46, 0.51)
+            border: none
+            transition: .2s ease-in-out
+            transition-property: background-color,border-color
+        & > .uk-active > *
+            background-color: $primarycolor
+        & li
+            padding: 2rem .8rem
+            cursor: pointer

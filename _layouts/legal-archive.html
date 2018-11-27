@@ -1,0 +1,34 @@
+---
+layout: base
+---
+
+<section class="wrapper will-grow maxwidth-lt mx-auto">
+    <h2 class="sr">Legal Policies</h2>
+    <div class="bg-white p-2 preferred-radius is-raised">
+        <ul class="grid more-space is-multi-col mostly-2 none m-0 maxwidth-tb mx-auto wrapper-y">
+        {% assign sorted = site.legal | sort:'position' %}
+        {% for item in site.legal %}
+            <li class="d-flx flx-dir-c j-c-sb">
+                {%- if item.title == 'Privacy Policy' -%}
+                <img src="{{ item.icon | prepend: site.url }}" alt="" class="thumbnail is-small mb-1">
+                {%- elsif item.title == 'Grievance Policy' -%}
+                <img src="{{ item.icon | prepend: site.url }}" alt="" class="thumbnail is-small mb-1"> 
+                {%- elsif item.title == 'End User Licence Agreement' -%}
+                <img src="{{ item.icon | prepend: site.url }}" alt="" class="thumbnail is-small mb-1"> 
+                {%- elsif item.title == 'Terms of Services' -%}
+                <img src="{{ item.icon | prepend: site.url }}" alt="" class="thumbnail is-small mb-1"> 
+                {%- endif -%}
+
+                <h2 class="mediumtext mb-1 m-0">{{ item.title }}</h2>
+                <div>
+                    <p class="nanotext">{{ item.description }}</p>
+                    <a href="{{site.url }}{{item.link}}" class="d-flx al-i-c">
+                        <span class="prefix">{{ item.link-text }}</span>
+                        <span> {%- include tools/icons.html icon="arrow-right" -%}</span>
+                    </a>
+                </div>
+            </li>
+        {%- endfor -%}
+        </ul>
+    </div>
+</section>

@@ -1,5 +1,6 @@
 ---
 title: Is it secure?
-description: Eyowo is a digital solution that helps you achieve simple day-to-day financial transactions. To use Eyowo, simply create an account here and you’re on your way to making your first transaction in seconds. Technically, you already have an Eyowo account. Find out here!
 position: 2
 ---
+
+All transactions on Eyowo are secure. This helps us prevent unauthorized access to your account. Contact us immediately via [support@eyowo.com](mailto:support@eyowo.com) if you have noticed any unauthorized activity on your Eyowo account.

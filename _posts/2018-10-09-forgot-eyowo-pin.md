@@ -13,6 +13,7 @@ tag: [PRESS RELEASE]
 color: '#C4702E'
 permalink: /conversations/:title/
 breadcrumb: Help! I forgot my Eyowo PIN
+comments: true
 ---
 
 Lagos, Nigeria - It was a Monday morning (September 3, 2018) in Lagos and Ciroma Chukwuma Adekunle had an interview at Softcom Limited. 

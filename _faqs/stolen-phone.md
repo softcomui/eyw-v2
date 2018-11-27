@@ -1,5 +1,6 @@
 ---
 title: What happens if my mobile phone is lost or stolen?
-description: Eyowo is a digital solution that helps you achieve simple day-to-day financial transactions. To use Eyowo, simply create an account here and you’re on your way to making your first transaction in seconds. Technically, you already have an Eyowo account. Find out here!
 position: 7
 ---
+
+It isn’t possible to send a payment using Eyowo without your app’s password or transaction code. In case this happens, please log on to Eyowo on the web in order to secure your account.

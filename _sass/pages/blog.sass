@@ -35,10 +35,20 @@
 
 .markdown
     max-width: $maxwidth-tb
-    > p, h1, h2, h3, h4, h5, h6, ul, ol
+    > p
         @media #{ $smallup}
             width: $maxwidth-sm
-            margin: 0 auto 1rem
+            margin: 0 auto 10px
+    > h1, h2, h3, h4, h5, h6
+        @media #{ $smallup}
+            width: $maxwidth-sm
+            margin: $space-sm auto $space-xxs
+        &:first-of-type
+            margin-top: 0
+    > ul, ol
+        @media #{ $smallup}
+            width: $maxwidth-sm
+            margin: 0 auto
     .markdown-paragraphs
         font-size: $nanofont
         @media #{ $smallup}
@@ -52,6 +62,7 @@
                 line-height: 65px
                 padding-top: .5rem
                 padding-right: 10px
+                color: $richblack
     .markdown-images-container
         padding-left:           0
         list-style-type:        none
@@ -67,6 +78,7 @@
             margin:             0
             img
                 height:         100%
+                min-height:     300px
             @media #{ $smallup}
                 &:nth-child(4n + 1)
                     grid-column:        1 / 8
@@ -78,14 +90,13 @@
                     grid-column:        6 / 13
             
 
-
-
-
 .post-item
     &:hover
         color:                          $readablegray
+        box-shadow:                     $buttonshadow
     .post-img
         height:                         250px
+        width:  100%
         border-top-left-radius:         $preferredradius
         border-top-right-radius:        $preferredradius
     .post-item-body
@@ -101,6 +112,7 @@
         display:                            flex
     &:hover
         color:                          $readablegray
+        box-shadow:                     $buttonshadow
     .featured-post-img
         width:                          100%
         height:                         auto
@@ -108,7 +120,7 @@
         border-top-right-radius:        $preferredradius
         @media #{ $mediumup}
             width:                          50%
-            height:                         100%
+            min-height:                     100%
             border-top-left-radius:         $preferredradius
             border-top-right-radius:        0
             border-bottom-left-radius:      $preferredradius
@@ -170,6 +182,7 @@
     min-height: 300px
     &.small
         min-height: 150px
+        height: 150px
     .archived-conversations-link 
         font-size: 1.7rem
         &.small
@@ -184,7 +197,7 @@
     &::after
         content: ""
         position: absolute
-        bottom: 0
+        bottom: -1.5px
         width: 220px
         height: 1.5px
         background-color: $primarycolor
@@ -217,21 +230,30 @@
 
 .after-reading-post
     border-radius: $preferredradius
-    @media #{ $smallup}
-        display: grid
-    // height: 120px
+    @media #{ $largeup}
+        display: flex
+        min-height: 120px
+        width: 100%
+    .after-reading-post-content
+        min-height: 150px
+        @media #{ $largeup}
+            min-height: 100%
+            width: calc(100% - 120px)
     img
-        height: 100px
+        height: 120px
         border-top-left-radius: $preferredradius
         border-top-right-radius: $preferredradius
+        @media #{ $largeup}
+            min-height: 100%
+            width: 120px
         &.right
-            @media #{ $mediumup}
+            @media #{ $largeup}
                 border-top-right-radius: 0
                 border-bottom-right-radius: 0
                 border-top-left-radius: $preferredradius
                 border-bottom-left-radius: $preferredradius
         &.left
-            @media #{ $mediumup}
+            @media #{ $largeup}
                 border-top-left-radius: 0
                 border-bottom-left-radius: 0
                 border-top-right-radius: $preferredradius

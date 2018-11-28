@@ -52,15 +52,19 @@
 .webview
     width: 520px
     object-fit: contain
+    @media #{ $xxlargeup}
+        width: 620px
 .feature-phone
     position: absolute
     z-index: 17
     width: 120px
-    bottom: -40px
+    bottom: -30px
     left: 190px
     object-fit: contain
+    @media #{ $xxlargeup}
+        bottom: -40px
 .iphoneview
-    top: 35px
+    top: 30px
     background: #fff
     box-shadow: 0 1px 4px 0 rgba(0,0,0,.05), 0 5px 15px 0 rgba(0,0,0,.05), 0 0 0 1px rgba(0,0,0,.03), inset 0 -2px 2px 2px rgba(0,0,0,.05)
     border-radius: 40px
@@ -71,6 +75,8 @@
     @media #{ $largeup}
         width:  245px
         height: 500px
+    @media #{ $xxlargeup}
+        top: 40px
     &.mobileview
         top: 0 
     .iphone_notch

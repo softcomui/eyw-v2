@@ -12,7 +12,7 @@ featured_image4: '/uploads/pages/blog1-4.jpg'
 excerpt: "When he hears someone is going to the village, he buys a wrapper. Inside that wrapper he wants to send to his mother, he will hide some money inside it"
 tag: [PRESS RELEASE]
 color: '#C4702E'
-permalink: /conversations/:title/
+permalink: /blog/:title/
 breadcrumb: The Big Parcel
 comments: true
 ---

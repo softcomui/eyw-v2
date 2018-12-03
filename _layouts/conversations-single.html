@@ -18,8 +18,8 @@ layout: base
 					</p>
 				</div>
 				<div class="d-flx al-i-c">
-					<img src="{{ page.author_image | prepend: site.url }}" class="mr-h avatar is-micro" alt="{{ page.author_name }}">
 					<p class="primary-caps m-0 ff-heading">{{ page.author_name}}</p>
+					<img src="{{ page.author_image | prepend: site.url }}" class="suffix is-wider avatar is-micro" alt="{{ page.author_name }}">
 				</div>
 			</div>
 		</div>
@@ -45,8 +45,9 @@ layout: base
 			*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
 			
 			var disqus_config = function () {
-			this.page.url = '{{ post.url }}' ;  // Replace PAGE_URL with your page's canonical URL variable
-			this.page.identifier = '{{ post.url }}' ; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+				this.page.url = '{{ page.url | absolute_url }}';
+                this.page.identifier = '{{ page.url }}';
+                this.page.title = '{{ page.title }}';
 			};
 			(function () { // DON'T EDIT BELOW THIS LINE
 				var d = document, s = d.createElement('script');

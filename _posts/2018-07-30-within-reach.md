@@ -12,7 +12,7 @@ featured_image4: '/uploads/pages/blog-3-4.png'
 excerpt: "Mondays are definitely some of the toughest days for Lagosians. It's another busy morning in the city that never sleeps."
 tag: [UPDATES]
 color: '#2F87A5'
-permalink: /conversations/:title/
+permalink: /blog/:title/
 breadcrumb: Within Reach
 comments: true
 ---

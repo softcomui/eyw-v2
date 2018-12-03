@@ -1,13 +1,13 @@
 ---
 layout: conversations-single
 title: How Do I Withdraw Cash from Eyowo at an ATM?
-author: Augustine Ogwo
+author_name: Augustine Ogwo
 author_image: "/uploads/people/austine1.jpg" 
 featured_image: '/uploads/blog/withdraw-cash-header.png'
 excerpt: "Eyowo offers users the opportunity to withdraw cash from any supported Automated Teller Machines (ATMs). What’s more interesting about withdrawing funds domiciled in Eyowo is the fact that one doesn’t need a debit card to achieve this"
 tag: [PRESS RELEASE]
 color: '#C4702E'
-permalink: /conversations/:title/
+permalink: /blog/:title/
 breadcrumb: How Do I Withdraw Cash from Eyowo at an ATM?
 comments: true
 ---

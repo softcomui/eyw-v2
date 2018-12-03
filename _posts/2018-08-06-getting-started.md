@@ -12,7 +12,7 @@ excerpt: "Eyowo provides an easy, convenient and secure way to make and receive 
 tag: [PRESS RELEASE]
 featured: true
 color: '#C4702E'
-permalink: /conversations/:title/
+permalink: /blog/:title/
 breadcrumb: Getting Started On Eyowo
 comments: true
 ---

@@ -12,7 +12,7 @@ featured_image4: '/uploads/pages/blog2-1.png'
 excerpt: "If you have ever been to a Nigerian ATM, you have probably witnessed one, some or all of these kind of people."
 tag: [UPDATES]
 color: '#2F87A5'
-permalink: /conversations/:title/
+permalink: /blog/:title/
 breadcrumb: Enter Your PIN
 comments: true
 ---

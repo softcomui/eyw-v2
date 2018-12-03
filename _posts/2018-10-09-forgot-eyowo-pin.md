@@ -11,7 +11,7 @@ featured_image4: '/uploads/blog/forgot-pin-03.png'
 excerpt: "It was a Monday morning (September 3, 2018) in Lagos and Ciroma Chukwuma Adekunle had an interview at Softcom Limited. Like many job seekers, he researched the company prior to the interview."
 tag: [PRESS RELEASE]
 color: '#C4702E'
-permalink: /conversations/:title/
+permalink: /blog/:title/
 breadcrumb: Help! I forgot my Eyowo PIN
 comments: true
 ---

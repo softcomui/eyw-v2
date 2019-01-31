@@ -115,7 +115,7 @@ You can always see the most updated changes to this Privacy Policy on www.eyowo.
 ### CONTACT US
 If you have any questions about this Privacy Policy, please contact us as follows: 
 1. Email: support@eyowo.com  or hello@eyowo.com 
-2. Call: 001-7001520
+2. Call: 01-7001520
 3. Postal mail address:
 Eyowo Integrated Payments Limited
 8, Oduduwa Crescent,

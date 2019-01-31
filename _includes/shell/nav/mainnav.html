@@ -12,6 +12,8 @@
             {%- assign entryName = entry.name | downcase | slugify -%}
             {% if url contains entryName %}
                 {% assign class = class | append: ' is-active' %}
+            {% elsif entry.name == 'Conversations' and url contains "blog" %}
+                {% assign class = class | append: ' is-active' %}
             {% elsif entry.name == 'Home' and url == '/' %}
                 {% assign class = class | append: ' is-active' %}
             {% endif %}    

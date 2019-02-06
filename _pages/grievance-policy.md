@@ -39,14 +39,14 @@ How to reach our support desk:
 ##### For Recharge, Bill Payment and Ticket Related Issues
 **Level 1:**
 - You can send an email to [support@eyowo.com](mailto:support@eyowo.com)
-- You can also call us on 01-7001510
+- You can also call us on 01-7001520
 
 **Level 2:**
 - If the resolution you received does not meet your expectations, please write to us: [support@eyowo.com](mailto:support@eyowo.com)
 
 ##### For Mobile-Wallet and Cash Wallet Related Issues
 **Level 1:**
-- You can reach our support-desk by calling 01-7001510
+- You can reach our support-desk by calling 01-7001520
   
 **Level 2:**
 - If the resolution you received does not meet your expectations, please write to us: [support@eyowo.com](mailto:support@eyowo.com)

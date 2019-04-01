@@ -11,6 +11,7 @@ language:       en
 paginate:       5
 paginate_path: /conversations/archived-conversations/p:num/
 # google_analytics_id: 'UA-122859875-1'
+google_analytics_id: 'UA-123315351-1'
 
 # Build settings
 markdown: kramdown

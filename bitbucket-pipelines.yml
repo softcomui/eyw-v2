@@ -1,0 +1,10 @@
+pipelines:
+  branches:
+    master:
+      - step:
+          image: atlassian/pipelines-awscli
+          script:
+
+            - aws deploy push --region eu-west-1 --application-name softcom-ireland --s3-location s3://eyowo-website-v5/eyowo-website-v5.zip --ignore-hidden-files
+
+
